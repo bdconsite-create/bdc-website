@@ -2,8 +2,7 @@
 
 import {
   Anchor, ArrowDown, ArrowRight, Building2, ChevronRight, Compass,
-  DraftingCompass, HardHat, Mail, MapPin, Menu, Phone, Ruler, Ship,
-  ShieldCheck, Waves, Wrench, X,
+  Mail, MapPin, Menu, Phone, Ruler, Ship, Waves, Wrench, X,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -121,7 +120,14 @@ export default function Home() {
 
       <section className="about section-shell" id="about" data-reveal>
         <SectionLabel number="01" text="ABOUT BDC" />
-        <div className="about-heading"><p className="eyebrow">เส้นทางแห่งการเติบโตและพัฒนา</p><h2>จากงานต่อเรือขนาดเล็ก สู่ผู้เชี่ยวชาญด้านงานโยธาทางน้ำครบวงจร</h2></div>
+        <div className="about-heading">
+          <p className="eyebrow">เส้นทางแห่งการเติบโตและพัฒนา</p>
+          <h2 className="line-heading about-title">
+            <span>จากงานต่อเรือขนาดเล็ก</span>
+            <span>สู่ผู้เชี่ยวชาญ</span>
+            <span>ด้านงานโยธาทางน้ำครบวงจร</span>
+          </h2>
+        </div>
         <div className="about-copy">
           <p>บริษัท บางกอก เดรดจิ้ง จำกัด ก่อตั้งโดยคนไทยในปี พ.ศ. 2534 เริ่มต้นจากการต่อเรือขนาดเล็กไว้จำหน่าย ก่อนพัฒนาสู่ธุรกิจงานขุดลอกร่องน้ำทางเดินเรือและงานทางน้ำ ด้วยการลงทุนในกองเรือ เครื่องจักร และบุคลากรอย่างต่อเนื่อง</p>
           <p>ปัจจุบันบริษัทให้บริการตั้งแต่งานขุดลอก งานก่อสร้างทางน้ำ งานสำรวจ งานต่อเรือและติดตั้ง ไปจนถึงงานกู้ภัยทางทะเล</p>
@@ -135,7 +141,7 @@ export default function Home() {
       <section className="services section-shell" id="services" data-reveal>
         <SectionLabel number="02" text="OUR SERVICES" />
         <div className="section-heading-row">
-          <div><p className="eyebrow">ONE PARTNER · COMPLETE CAPABILITY</p><h2>บริการครบวงจรด้านงานโยธาทางน้ำ</h2></div>
+          <div><p className="eyebrow">ONE PARTNER · COMPLETE CAPABILITY</p><h2 className="line-heading service-title"><span>บริการครบวงจร</span><span>ด้านงานโยธาทางน้ำ</span></h2></div>
           <p>ผสานประสบการณ์ภาคสนาม บุคลากรเฉพาะทาง และเครื่องจักรที่เหมาะสม เพื่อสนับสนุนโครงการตั้งแต่การสำรวจจนถึงการปฏิบัติงานจริง</p>
         </div>
         <div className="service-grid">
@@ -156,7 +162,7 @@ export default function Home() {
       <section className="projects section-shell" id="projects" data-reveal>
         <SectionLabel number="03" text="SELECTED PROJECTS" />
         <div className="section-heading-row projects-heading">
-          <div><p className="eyebrow">TRACK RECORD ACROSS THAILAND</p><h2>ผลงานที่เกิดขึ้นในน่านน้ำจริง</h2></div>
+          <div><p className="eyebrow">TRACK RECORD ACROSS THAILAND</p><h2 className="line-heading project-title"><span>ผลงานที่ได้รับความไว้วางใจ</span><span>จากหน่วยงานราชการและเอกชน</span></h2></div>
           <p>ตัวอย่างโครงการขุดลอกและบำรุงรักษาร่องน้ำที่ได้รับความไว้วางใจ จากหน่วยงานภาครัฐและองค์กรชั้นนำ</p>
         </div>
         <div className="project-grid">
@@ -176,7 +182,7 @@ export default function Home() {
         </div>
         <div className="fleet-copy">
           <SectionLabel number="04" text="FLEET & EQUIPMENT" dark />
-          <p className="eyebrow orange-text">CAPABILITY ON THE WATER</p><h2>กองเรือที่พร้อมสำหรับทุกสภาพงาน</h2>
+          <p className="eyebrow orange-text">CAPABILITY ON THE WATER</p><h2 className="line-heading fleet-title"><span>กองเรือและเครื่องจักรครบวงจร</span><span>พร้อมขับเคลื่อนความสำเร็จในทุกโครงการ</span></h2>
           <p className="fleet-intro">เรือขุดหลายประเภท เรือสนับสนุน และเครื่องจักรหนัก ช่วยให้บริษัทเลือกวิธีปฏิบัติงานให้เหมาะกับพื้นที่ วัสดุท้องน้ำ และข้อกำหนดของแต่ละโครงการ</p>
           <div className="fleet-list">{fleetTypes.map((type, index) => <div key={type}><span>0{index + 1}</span><strong>{type}</strong><ArrowRight size={17} /></div>)}</div>
           <div className="fleet-fact"><Ship size={28} /><div><strong>28+</strong><span>เรือขุดและเรือสนับสนุนตามรายการใน Company Profile</span></div></div>
@@ -186,24 +192,23 @@ export default function Home() {
       <section className="quality section-shell" id="quality" data-reveal>
         <SectionLabel number="05" text="QUALITY & RESPONSIBILITY" />
         <div className="quality-content">
-          <div><p className="eyebrow">QUALITY IN EVERY OPERATION</p><h2>คุณภาพ ความปลอดภัย และความรับผิดชอบต่อสิ่งแวดล้อม</h2><p>การดำเนินงานทุกโครงการให้ความสำคัญกับมาตรฐานการบริหารคุณภาพ ความพร้อมของบุคลากรและเครื่องจักร รวมถึงผลกระทบต่อพื้นที่ทางน้ำและชุมชน</p></div>
-          <div className="quality-cards">
-            <article><ShieldCheck size={30} /><strong>ISO 9001:2015</strong><span>ระบบบริหารคุณภาพ</span></article>
-            <article><HardHat size={30} /><strong>OPERATIONAL SAFETY</strong><span>ความปลอดภัยในการปฏิบัติงาน</span></article>
-            <article><DraftingCompass size={30} /><strong>ENGINEERING CONTROL</strong><span>การวางแผนและควบคุมงาน</span></article>
+          <div><p className="eyebrow">QUALITY IN EVERY OPERATION</p><h2 className="line-heading quality-title"><span>บริการด้วยคุณภาพ</span><span>ด้วยเทคโนโลยีที่ทันสมัย</span><span>และความรับผิดชอบต่อสิ่งแวดล้อม</span></h2><p>การดำเนินงานทุกโครงการให้ความสำคัญกับมาตรฐานการบริหารคุณภาพ ความพร้อมของบุคลากรและเครื่องจักร รวมถึงผลกระทบต่อพื้นที่ทางน้ำและชุมชน</p></div>
+          <div className="iso-panel">
+            <img src={asset("/images/iso-9001-bureau-veritas.png")} alt="เครื่องหมายรับรองระบบบริหารคุณภาพ ISO 9001 โดย Bureau Veritas" loading="lazy" />
+            <div><strong>ISO 9001</strong><span>ระบบบริหารคุณภาพที่ได้รับการรับรอง</span></div>
           </div>
         </div>
       </section>
 
       <section className="contact" id="contact" data-reveal>
         <div className="contact-watermark">BDC</div>
-        <div><p className="eyebrow light">LET&apos;S BUILD ON WATER</p><h2>พร้อมสนับสนุนความสำเร็จของทุกโครงการทางน้ำ</h2></div>
-        <div className="contact-actions"><a href="tel:+6623975860"><Phone size={19} /> 02-397-5860–2</a><a href="mailto:bkkdredging1991@yahoo.com"><Mail size={19} /> ส่งอีเมลถึงบริษัท</a></div>
+        <div><p className="eyebrow light">LET&apos;S BUILD ON WATER</p><h2 className="line-heading contact-title"><span>พร้อมสนับสนุนความสำเร็จ</span><span>และโอกาสทางธุรกิจอย่างยั่งยืน</span></h2></div>
+        <div className="contact-actions"><a href="tel:+6623975860"><Phone size={19} /> 0-2397-5860-1</a><a href="mailto:bkkdredging1991@yahoo.com"><Mail size={19} /> ส่งอีเมลถึงบริษัท</a></div>
       </section>
 
       <footer>
         <div className="footer-brand"><img src={asset("/images/bdc-logo.png")} alt="BDC" /><div><strong>บริษัท บางกอก เดรดจิ้ง จำกัด</strong><span>BANGKOK DREDGING CO., LTD.</span></div></div>
-        <div className="footer-address"><MapPin size={18} /><p>12/35 หมู่ 15 ซอยบางนา-ตราด 39 ถนนบางนา-ตราด ตำบลบางแก้ว อำเภอบางพลี สมุทรปราการ 10540</p></div>
+        <div className="footer-address"><MapPin size={20} /><p>เลขที่ 12/35 ม.15 ซ.บางนาตราด39 (ศรหิรัญ) ถ.บางนา-ตราด กม.5, ตำบลบางแก้ว อำเภอบางพลี จังหวัดสมุทรปราการ 10540</p></div>
         <div className="footer-note"><span>DREDGING AND MARINE CONTRACTOR</span><span>© 2026 BANGKOK DREDGING</span></div>
       </footer>
     </main>
