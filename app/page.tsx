@@ -192,10 +192,10 @@ export default function Home() {
       <section className="quality section-shell" id="quality" data-reveal>
         <SectionLabel number="05" text="QUALITY & RESPONSIBILITY" />
         <div className="quality-content">
-          <div><p className="eyebrow">QUALITY IN EVERY OPERATION</p><h2 className="line-heading quality-title"><span>บริการด้วยคุณภาพ</span><span>ด้วยเทคโนโลยีที่ทันสมัย</span><span>และความรับผิดชอบต่อสิ่งแวดล้อม</span></h2><p>การดำเนินงานทุกโครงการให้ความสำคัญกับมาตรฐานการบริหารคุณภาพ ความพร้อมของบุคลากรและเครื่องจักร รวมถึงผลกระทบต่อพื้นที่ทางน้ำและชุมชน</p></div>
+          <div><p className="eyebrow">QUALITY IN EVERY OPERATION</p><h2 className="line-heading quality-title"><span>บริการด้วยคุณภาพ</span><span>และเทคโนโลยีที่ทันสมัย</span><span>ใส่ใจต่อสิ่งแวดล้อม</span></h2><p>การดำเนินงานทุกโครงการให้ความสำคัญกับมาตรฐานการบริหารคุณภาพ ความพร้อมของบุคลากรและเครื่องจักร รวมถึงผลกระทบต่อพื้นที่ทางน้ำและชุมชน</p></div>
           <div className="iso-panel">
             <img src={asset("/images/iso-9001-bureau-veritas.png")} alt="เครื่องหมายรับรองระบบบริหารคุณภาพ ISO 9001 โดย Bureau Veritas" loading="lazy" />
-            <div><strong>ISO 9001</strong><span>ระบบบริหารคุณภาพที่ได้รับการรับรอง</span></div>
+            <div><strong>ISO 9001:2015</strong><span>รับรองมาตรฐาน</span></div>
           </div>
         </div>
       </section>
